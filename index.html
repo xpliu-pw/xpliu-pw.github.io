@@ -1,11 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>My Homepage</title>
+    <title>刘兴鹏 - 个人主页</title>
+    <style>
+        /* 全局布局：左右两列均等分 */
+        .page-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 左右两列各占50%宽度 */
+            gap: 20px; /* 列间距 */
+            max-width: 1200px; /* 页面最大宽度，避免过宽 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px;
+        }
+
+        /* 左列：照片 + 导航 */
+        .left-column {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: flex-start; /* 内容左对齐 */
+        }
+        .photo {
+            width: 100%; /* 照片宽度占满左列 */
+            max-width: 400px; /* 限制照片最大宽度 */
+            height: auto; /* 保持宽高比 */
+            border-radius: 8px;
+            margin-bottom: 20px; /* 与导航的间距 */
+        }
+        .nav-links {
+            text-align: left; /* 链接文字左对齐 */
+            width: 100%; /* 占满左列宽度 */
+        }
+        .nav-links a {
+            display: block; /* 垂直排列 */
+            margin: 8px 0; /* 链接上下间距 */
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 右列：英文信息 + 中文翻译 */
+        .right-column {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            justify-content: center; /* 内容垂直居中 */
+        }
+        .english-info, .chinese-info {
+            margin-bottom: 20px; /* 英文与中文的间距 */
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        /* 内容区域通用样式 */
+        .content-section {
+            max-width: 1200px; /* 内容区域最大宽度 */
+            margin: 40px auto; /* 上下间距 + 水平居中 */
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 22px;
+            color: #2c3e50;
+            border-bottom: 2px solid #0066cc; /* 标题下划线 */
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .subsection-title {
+            font-size: 18px;
+            color: #34495e;
+            margin: 15px 0 10px 0;
+        }
+        .list-item {
+            margin: 8px 0;
+        }
+        .paper-item {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 3px solid #0066cc; /* 论文条目左侧标记 */
+        }
+         .cv - item {
+            margin: 10px 0;
+            display: flex;
+            align - items: start;
+        }
+
+        .cv - item p:first - child {
+            flex: 1;
+            padding - right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, this is my personal homepage!</h1>
-    <p>Welcome to my GitHub.io site.</p>
+    <div class="page-container">
+        <!-- 左列：照片 + 导航 -->
+        <div class="left-column">
+            <img src="my-photo2.jpeg" alt="生活照片" class="photo">
+            <div class="nav-links">
+                <a href="#cv">CV 简历</a>
+                <a href="#research">Research 科学研究</a>
+                <a href="#conference">Conference / Seminar Talks</a>
+            </div>
+        </div>
+
+        <!-- 右列：英文信息 + 中文翻译 -->
+        <div class="right-column">
+            <div class="english-info">
+                <h1>Xingpeng Liu</h1>
+                <p>Associate Professor</p>
+                <p>School of Mathematical Sciences,</p>
+                <p>Harbin Engineering University,</p>
+                <p>145 Nantong Street, Nangang District,</p>
+                <p>150001 Harbin, P. R. China</p>
+            </div>
+            <div class="chinese-info">
+                <h1>刘兴鹏</h1>
+<br>
+                <p>中国黑龙江省哈尔滨市南岗区南通大街145号，150001</p>
+                <p>哈尔滨工程大学，数学科学学院</p>
+<br>
+<p>Office 办公室: Yifu Building Room 416 - 逸夫楼416房间</p>
+<br>
+<p>Email 邮箱: xpliu[(a)]hrbeu.edu.cn</p>
+
+               </div>
+        </div>
+    </div>
+
+    <!-- 1. CV 简历 -->
+     <div id="cv" class="content-section">
+        <h2 class="section-title">CV 简历</h2>
+        <div class="section-content">
+     <div class="list-item">2026 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  副教授，哈尔滨工程大学数学科学学院</div>
+            <div class="list-item">2024 - 2025 博士后，南方科技大学深圳国际数学中心</div>
+            <div class="list-item">2022 - 2023 博士后，中国科学技术大学</div>
+  <div class="list-item">2015 - 2021 硕博连读，中国科学技术大学 (2017 - 2019 联合培养博士，Kansas 州立大学)</div>
+
+            <div class="list-item">2011 - 2015 本科，扬州大学</div>
+
+         
+        </div>
+    </div>
+
+     <!-- 2. Research 科学研究 -->
+     <div id="research" class="content-section">
+         <h2 class="section-title">Research 科学研究</h2>
+         <div class="section-content">
+             
+             <!-- 研究方向：先英文，后中文 -->
+             <h3 class="subsection-title">Research Interests 研究方向</h3>
+             <div class="list-item">
+                 Lie algebras, quantum algebras and their representation theory, including: infinite-dimensional Lie algebras (e.g., Kac-Moody algebras), quantum groups, quantum affine algebras, Yangians, and related representation problems.
+                 李代数、量子代数及其表示理论，包括：无穷维李代数（如 Kac-Moody 代数）、量子群、量子仿射代数、Yangian 以及相关表示问题.
+             </div>
+             
+             <!-- 主持项目：先英文，后中文 -->
+             <h3 class="subsection-title">Grants 主持项目</h3>
+             <div class="list-item">
+                 National Natural Science Foundation of China (2025-2027) 青年 C 类项目（主持）：量子群的表示以及 R-矩阵构造 No. 12401030
+             </div>
+             <div class="list-item">
+                 China Postdoctoral Science Foundation (2024-2025) 第 75 批博士后面上项目 No. 2024M751285
+             </div>
+             
+           
+
+             <!-- 已发表/待刊论文 (按时间顺序升序排列) -->
+             <h3 class="subsection-title">Publications</h3>
+             <div class="paper-item">
+                 <p><strong>Liu X.</strong>, A note on parabolic Verma module homomorphisms over Kac-Moody algebras, J. Pure Appl. Algebra, 226(2022): 1-14, DOI: <a href="https://doi.org/10.1016/j.jpaa.2021.106868" target="_blank">10.1016/j.jpaa.2021.106868</a></p>
+             </div>
+             <div class="paper-item">
+                 <p>Chen H., Gao Y., <strong>Liu X.</strong>, Wang L., U^0-free quantum group representations, J. Algebra, 642 (2023): 330–366, DOI: <a href="https://doi.org/10.1016/j.jalgebra.2023.11.037" target="_blank">10.1016/j.jalgebra.2023.11.037</a></p>
+             </div>
+             <div class="paper-item">
+                 <p><strong>Liu X.</strong>, On multiplicity-free weight modules over quantum affine algebras, Pacific J. Math. 330 (2024): 251–282, DOI: <a href="https://doi.org/10.2140/pjm.2024.330.251" target="_blank">10.2140/pjm.2024.330.251</a></p>
+             </div>
+             <div class="paper-item">
+                 <p>Chen H., Dai H., <strong>Liu X.</strong>, A class of polynomial modules over current algebras, Commun. Math. Stat. 13(2025): 1219–1239, DOI: <a href="https://doi.org/10.1007/s40304-023-00356-4" target="_blank">10.1007/s40304-023-00356-4</a></p>
+             </div>
+             <div class="paper-item">
+                 <p>Chen H., Dai H., <strong>Liu X.</strong>, Zhao Q., Tensor products of infinite-dimensional evaluation modules over the Yangian Y(sl2), J. Algebra, 692(2026), 627–652, DOI: <a href="https://doi.org/10.1016/j.jalgebra.2026.01.001" target="_blank">10.1016/j.jalgebra.2026.01.001</a></p>
+             </div>
+             <!-- 已接收待刊登文章 -->
+             <div class="paper-item">
+                 <p>Dai H., <strong>Liu X.</strong>, Highest weight modules, tensor products and cyclicity over current Virasoro algebra, J. Lie Theory (accepted).</p>
+             </div>
+
+             <!-- 预印本/进行中的工作 -->
+             <h3 class="subsection-title">Preprints and work in progress</h3>
+             <div class="paper-item">
+                 <p>Futorny V., <strong>Liu X.</strong>, Dimension growth and Gelfand-Kirillov dimensions of irreducible representations of quantum groups, arXiv: <a href="https://arxiv.org/abs/2512.14385" target="_blank">2512.14385</a>.</p>
+             </div>
+             <!-- 如需添加更多预印本，请按相同格式增加 paper-item 条目 -->
+
+         </div>
+         
+         <!-- 在 （pre）Publications 后添加 arXiv 和 ORCID 信息 -->
+               <p class="arxiv-orcid-info">
+                   Find my papers on <a href="https://arxiv.org/a/liu_x_18.html" target="_blank">arXiv</a> &nbsp;|&nbsp;
+                   ORCID: <a href="https://orcid.org/0000-0001-5301-4199" target="_blank">0000-0001-5301-4199</a>
+               </p>
+     </div>
+     
+  
+
+    <!-- 4. Conference / Seminar Talks -->
+    <div id="conference" class="content-section">
+        <h2 class="section-title">Conference / Seminar Talks</h2>
+        <div class="section-content">
+            <div class="list-item">17. The Second Conference on Lie Theory (NKU-NYU Abu Dhabi-SUSTech), 南开大学陈省身数学所，天津，2026年3月25-29日. 报告标题：On dimension growth of non-restricted irreducible modules over quantum groups at roots of unity (2026 年 3 月 26 日).</div>
+            <div class="list-item">16. 李代数论坛，华中师范大学数学科学学院，武汉，2026 年 1 月 9 日 – 10 日. 报告标题：Tensor Products of Highest Weight Modules over Yangians (2026 年 1 月 10 日).</div>
+            <div class="list-item">15. 第一届大湾区代数学会议，深圳大学数学科学学院承办，深圳，2025 年 12 月 6 – 9 日. 报告标题：Completely-pointed weight modules over quantum affine algebras and tensor products (2025 年 12 月 8 日).</div>
+            <div class="list-item">14. 第十九届全国李理论会议，广东工业大学数学科学学院承办，广州佛山，2025 年 11 月 21 – 27 日. 报告标题：On dimension growth of non-restricted irreducible modules over quantum groups at roots of unity (2025 年 11 月 26 日).</div>
+            <div class="list-item">13. Workshop on Lie and vertex algebras，南方科技大学深圳国际数学中心，深圳，2025 年 11 月 19 – 20 日. 报告标题：On dimension growth of non-restricted irreducible modules over quantum groups at roots of unity (2025 年 11 月 20 日).</div>
+            <div class="list-item">12. 翡翠湖代数论坛 II 报告五则，合肥工业大学数学学院，合肥，2025 年 5 月 17 日. 报告标题：Cyclicity and Irreducibility in Tensor Products of Highest Weight Modules over Yangians.</div>
+            <div class="list-item">11. HKU-SUSTech Joint Meeting in Mathematics，香港大学数学系，香港，2025 年 4 月 29 – 30 日. 报告标题：Parabolic Inductions and Simple Weight Modules of Quantum Affine Algebras (2025 年 4 月 30 日).</div>
+            <div class="list-item">10. Shenzhen Thematic Program “Representation Theory”: Quantum Groups in Shenzhen，南方科技大学深圳国际数学中心，深圳，2025 年 3 月 23 – 31 日. 报告标题：Completely-Pointed Weight Modules over Quantum Affine Algebras (2025 年 3 月 24).</div>
+            <div class="list-item">9. 李代数报告，中国矿业大学数学学院，徐州，2025 年 1 月 17 日. 报告标题：Quantum Groups and Multiplicity-Free Weight Modules.</div>
+            <div class="list-item">8. 代数与表示论会议 2025，悉尼大学数学与统计学院，澳大利亚，2025 年 1 月 8 – 15 日. 报告标题：On Multiplicity-Free Weight Modules over Quantized Enveloping Algebras (2025 年 1 月 8 日).</div>
+            <div class="list-item">7. 量子代数论坛，华中师范大学数学与统计学院，武汉，2024 年 12 月 19 – 22 日. 报告标题：On Multiplicity-Free Weight Modules over Quantized Enveloping Algebras (2024 年 12 月 21 日).</div>
+            <div class="list-item">6. First China-Uzbekistan Conference in Representation Theory，新乌兹别克斯坦大学数学系，乌兹别克斯坦塔什干，2024 年 8 月 20 – 30 日. 报告标题：On Multiplicity-Free Weight Modules over Quantized Enveloping Algebras (2024 年 8 月 26 日).</div>
+            <div class="list-item">5. 李代数及其表示会议，苏州大学数学科学学院，苏州，2024 年 4 月 8 – 11 日. 报告标题：U<sup>0</sup>-free Quantum Group Representations (2024 年 4 月 9 日).</div>
+            <div class="list-item">4. 代数与表示论会议，中国科学技术大学数学科学学院，合肥，2023 年 7 月 5 – 6 日. 报告标题：Quantum Groups and Representation Theory (2023 年 7 月 6 日).</div>
+            <div class="list-item">3. 李代数与表示理论会议，上海大学数学系，上海，2020 年 12 月 6 日. 报告标题：Homomorphisms Between Parabolic Verma Modules.</div>
+            <div class="list-item">2. 李代数论坛（线上），苏州大学数学科学学院，苏州，2020 年 8 月 1 – 5 日. 报告标题：Dualities in Category O over Infinite-dimensional Lie Algebras (2020 年 8 月 1 日).</div>
+            <div class="list-item">1. Colloquium，合肥工业大学数学学院，合肥，2019 年 9 月 17 – 18 日. 报告标题：Jantzen Filtrations and BGG Theorem (2019 年 9 月 17 日).</div>
+        </div>
+    </div>
+
+  
 </body>
 </html>
